@@ -3,3 +3,50 @@
     margin: 0;
     padding: 0;
 }
+
+html {
+    font-size: 12px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-heading {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.board {
+    width: 80vmin;
+    height: 80vmin;
+    max-width: 600px;
+    max-height: 600px;
+    background-color: white;
+    border: 0.5rem solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.space {
+    border: 0.25rem solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 650px) {
+    html {
+        font-size: 16px;
+    }
+}
