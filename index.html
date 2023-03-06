@@ -7,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
     <h1 class="main-heading">Tic-Tac-Toe</h1>
     <main id="board" class="board">
-        <div id="space" class="space">X</div>
-        <div id="space" class="space"></div>
-        <div id="space" class="space"></div>
-        <div id="space" class="space"></div>
-        <div id="space" class="space"></div>
-        <div id="space" class="space">O</div>
-        <div id="space" class="space"></div>
-        <div id="space" class="space"></div>
-        <div id="space" class="space"></div>
+        <div data-cell-index="0" id="space" class="space"></div>
+        <div data-cell-index="1" id="space" class="space"></div>
+        <div data-cell-index="2" id="space" class="space"></div>
+        <div data-cell-index="3" id="space" class="space"></div>
+        <div data-cell-index="4" id="space" class="space"></div>
+        <div data-cell-index="5" id="space" class="space"></div>
+        <div data-cell-index="6" id="space" class="space"></div>
+        <div data-cell-index="7" id="space" class="space"></div>
+        <div data-cell-index="8" id="space" class="space"></div>
     </main>
+    <button id="restart-btn">Restart Game</button>
 </body>
 
 </html>

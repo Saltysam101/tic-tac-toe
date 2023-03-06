@@ -45,6 +45,23 @@ body {
     font-weight: bold;
 }
 
+#restart-btn {
+    width: 150px;
+    height: 30px;
+    font-size: 1.2rem;
+    background-color: tomato;
+    border-color: tomato;
+    color: white;
+    margin-top: 2rem;
+}
+
+#restart-btn:hover {
+    background-color: white;
+    border-color: white;
+    color: tomato;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 650px) {
     html {
         font-size: 16px;
