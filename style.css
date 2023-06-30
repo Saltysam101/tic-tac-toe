@@ -23,6 +23,13 @@ body {
     font-size: 3rem;
 }
 
+#game-dialogue{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: tomato;
+}
+
 .board {
     width: 80vmin;
     height: 80vmin;

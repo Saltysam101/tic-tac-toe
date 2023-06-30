@@ -1,8 +1,12 @@
 console.log("Hello There!")
 
+const gameDialogue = document.getElementById("game-dialogue");
+
 let gameIsActive = true;
 
 let currentPlayer = "X";
+let prevPlayer = [];
+
 
 let gameState = ["", "", "", "", "", "", "", "", "", ]
 
@@ -11,8 +15,18 @@ function handleSpacePlayed(clickedSpace, clickedSpaceIdx) {
     clickedSpace.textContent = currentPlayer;
 }
 
+/* function handleRoundWon (player) {
+    gameIsActive = false;
+    gameDialogue.innerText = `Player ${player} won!`
+    return;
+} */
+
+
+
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
+        prevPlayer.push(currentPlayer);
+        return gameDialogue.innerText = `It is player's ${currentPlayer} turn!`
 }
 
 function handleResultValidation() {
@@ -43,14 +57,15 @@ function handleResultValidation() {
         }
     }
     if (roundWon) {
-        gameActive = false;
-        currentPlayer = ""
+        gameIsActive = false;
+        gameDialogue.innerText = `Player ${prevPlayer.slice(-1)} won!`
         return;
     }
 
     let roundDraw = !gameState.includes("");
     if (roundDraw) {
         gameActive = false;
+        gameDialogue.innerText = "It was a draw!";
         return;
     }
 
@@ -71,9 +86,11 @@ function handleSpaceClick(clickedSpaceEvent) {
 }
 
 function handleRestartGame() {
-    gameActive = true;
+    gameIsActive = true;
     currentPlayer = "X";
+    gameDialogue.innerText = `Let's Play!`;
     gameState = ["", "", "", "", "", "", "", "", ""];
+    prevPlayer = [];
     document.querySelectorAll('.space')
         .forEach(cell => cell.innerHTML = "");
 }
