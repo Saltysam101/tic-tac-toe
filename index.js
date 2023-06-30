@@ -15,13 +15,6 @@ function handleSpacePlayed(clickedSpace, clickedSpaceIdx) {
     clickedSpace.textContent = currentPlayer;
 }
 
-/* function handleRoundWon (player) {
-    gameIsActive = false;
-    gameDialogue.innerText = `Player ${player} won!`
-    return;
-} */
-
-
 
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
